@@ -1,0 +1,131 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.top-form {
+  -fx-background-color: #ffff;
+  -fx-border-color: #0000;
+  -fx-border-width: .4px .4px .2px .4px;
+}
+
+.semi-top-form{
+    -fx-background-color: #efefef;
+    -fx-border-color: #0000;
+    -fx-border-width: .2px .4px .8px 4px;
+}
+.back:hover{
+    -fx-background-color: transparent;
+     -fx-cursor: hand;
+}
+.left-form{
+    -fx-background-color: linear-gradient(to bottom right, #121c76, #ffff);
+}
+.nav-btn{
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+}
+.signout{
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+}
+
+.white-bg{
+    -fx-background-color: #ffff;
+    -fx-background-radius: 8px;
+    
+}
+.card{
+    -fx-background-radius: 5px;
+}
+.shadow{
+    -fx-effect: dropshadow(three-pass-box , rgba(0,0,0,0.5),6,0,0,0);
+}
+.table-view{
+    -fx-background-color: transparent;
+    -fx-border-color: #121c76;
+    -fx-border-radius: 8px;
+}
+.table-view .table-column{
+    -fx-alignment: CENTER;
+    
+}
+.table-view .column-header-background{
+    -fx-background-color: #121c76;
+    -fx-background-insets: 0 0 0 0 ;
+    -fx-background-radius: 8px 8px 0px 0px;
+}
+
+.table-view .column-header, .filter{
+    -fx-background-color: transparent;
+    -fx-size:40px;
+}
+.table-view .column-header .label{
+    -fx-text-fill: #ffff;
+}
+.textfield{
+    -fx-background-color: transparent;
+    -fx-border-color: #121c76;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+}
+.textfield:focused{
+    -fx-border-width: 1.8px;
+    -fx-background-color: #fff;
+}
+.search{
+    -fx-background-color: transparent;
+    -fx-border-color: #121c76;
+    -fx-font-size: 13px;
+    
+}
+.search:focused{
+    -fx-border-width: 2px;
+}
+.add-btn{
+    -fx-background-color: #121c76;
+    -fx-cursor: hand;
+}
+.add-btn:hover{
+    -fx-background-color: #121c76;
+    -fx-cursor: hand;
+}
+
+.update-btn{
+    -fx-background-color: #121c76;
+    -fx-cursor: hand;
+}
+.update-btn:hover{
+    -fx-background-color: #121c76;
+    -fx-cursor: hand;
+}
+.clear-btn{
+    -fx-background-color: #121c76;
+    -fx-cursor: hand;
+}
+.clear-btn:hover{
+    -fx-background-color: #121c76;
+    -fx-cursor: hand;
+}
+.delete-btn{
+    -fx-background-color: red;
+    -fx-cursor: hand;
+}
+.delete-btn:hover{
+    -fx-background-color: red;
+    -fx-cursor: hand;
+}
+
+.alert {
+    -fx-background-color: #f0f0f0;
+    -fx-border-color: #bcbcbc;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+}
+
+.alert .header-panel {
+    -fx-background-color: #bcbcbc;
+}
+
+.alert .content {
+    -fx-font-size: 14px;
+}

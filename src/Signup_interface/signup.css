@@ -1,0 +1,23 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.CreateAccount:hover{
+    -fx-cursor: hand;
+}
+.LoginButton:hover{
+     -fx-cursor: hand;
+}
+.back{
+      -fx-cursor: hand;
+}
+.loginlab:hover{
+    -fx-cursor: hand;
+    -fx-font-underline: true;
+}
+.button:hover {
+    -fx-cursor: hand;
+}

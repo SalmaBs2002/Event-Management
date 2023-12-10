@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Finance_interface.FinanceController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="semi-top-form" stylesheets="@Finance.css">
+         <children>
+            <BorderPane layoutX="254.0" layoutY="145.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="58.0" prefWidth="1136.0" styleClass="top-form" stylesheets="@Finance.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label layoutX="37.0" layoutY="20.0" text="Aysel , Event Master Pro" textFill="#121c76">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="267.0" layoutY="6.0" prefHeight="39.0" prefWidth="534.0" stylesheets="@Finance.css" text="Finance" textFill="#121c76">
+                           <font>
+                              <Font name="System Bold" size="36.0" />
+                           </font>
+                           <effect>
+                              <Bloom />
+                           </effect>
+                        </Label>
+                        <Button fx:id="BackBtn" layoutX="993.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="26.0" prefWidth="96.0" style="-fx-border-color: #121c76; -fx-background-color: ffffffff; -fx-border-radius: 15;" styleClass="back" stylesheets="@Finance.css" text="Back" textFill="#121c76" />
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="542.0" prefWidth="240.0" styleClass="left-form" stylesheets="@..\CSS_files\intrfaceJAVA.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label layoutX="57.0" layoutY="39.0" text="Welcome  " textFill="WHITE">
+                           <font>
+                              <Font size="27.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="30.0" layoutY="78.0" text="To your Event !" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="27.0" />
+                           </font>
+                        </Label>
+                        <Line endX="100.0" layoutX="120.0" layoutY="155.0" startX="-100.0" stroke="WHITE" />
+                        <Button fx:id="show_stat_btn" layoutX="16.0" layoutY="192.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="39.0" prefWidth="207.0" style="-fx-background-color: #121c76;" styleClass="nav-btn" stylesheets="@finance.css" text="Show Statistics" textFill="WHITE">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="add_inc_exp_btn" layoutX="16.0" layoutY="251.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="63.0" prefWidth="207.0" style="-fx-background-color: #121c76;" styleClass="nav-btn" stylesheets="@..\CSS_files\intrfaceJAVA.css" text="Add Incomes &#10;and expenses" textFill="WHITE">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="signout" layoutX="8.0" layoutY="509.0" mnemonicParsing="false" onAction="#signout" prefHeight="26.0" prefWidth="96.0" style="-fx-border-color: #121c76; -fx-border-radius: 15;" styleClass="signout" stylesheets="@../FullMenu_interface/FullMenu.css" text="Sign out" textFill="#121c76" />
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="541.0" prefWidth="833.0" styleClass="semi-top-form" stylesheets="@..\CSS_files\intrfaceJAVA.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="show_stat_fin_form" layoutX="5.0" layoutY="9.0">
+                           <children>
+                              <AnchorPane layoutX="5.0" layoutY="5.0" prefHeight="518.0" prefWidth="830.0" stylesheets="@..\CSS_files\intrfaceJAVA.css">
+                                 <children>
+                                    <BarChart fx:id="BarChart" layoutX="25.0" layoutY="179.0" prefHeight="302.0" prefWidth="790.0" stylesheets="@../Guests_interface/guests.css" title="Event statistics">
+                                      <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                      </yAxis>
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-bg" />
+                                       </styleClass>
+                                    </BarChart>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                              </AnchorPane>
+                              <AnchorPane layoutX="6.0" layoutY="4.0" prefHeight="166.0" prefWidth="830.0" style="-fx-border-color: #121c76; -fx-border-radius: 8;" styleClass="white-bg" stylesheets="@..\CSS_files\intrfaceJAVA.css">
+                                 <children>
+                                    <AnchorPane layoutX="10.0" layoutY="11.0" prefHeight="144.0" prefWidth="261.0" style="-fx-background-color: #121c76;" styleClass="card" stylesheets="@..\CSS_files\intrfaceJAVA.css">
+                                       <children>
+                                          <Label layoutX="80.0" layoutY="108.0" text="Total Income " textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="total_income" alignment="CENTER_RIGHT" layoutX="95.0" layoutY="21.0" prefHeight="27.0" prefWidth="137.0" textFill="WHITE">
+                                             <font>
+                                                <Font size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView layoutX="12.0" layoutY="24.0">
+                                             <image>
+                                                <Image url="@../Pics/money.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="285.0" layoutY="12.0" prefHeight="144.0" prefWidth="258.0" style="-fx-background-color: #121c76;" styleClass="card" stylesheets="@..\CSS_files\intrfaceJAVA.css">
+                                       <children>
+                                          <Label fx:id="total_expenses" alignment="CENTER_RIGHT" layoutX="101.0" layoutY="13.0" prefHeight="27.0" prefWidth="137.0" textFill="WHITE">
+                                             <font>
+                                                <Font size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="66.0" layoutY="108.0" text="Total Expenses" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView layoutX="14.0" layoutY="25.0">
+                                             <image>
+                                                <Image url="@../Pics/perte-dargent.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="557.0" layoutY="12.0" prefHeight="144.0" prefWidth="249.0" style="-fx-background-color: #121c76;" styleClass="card" stylesheets="@..\CSS_files\intrfaceJAVA.css">
+                                       <children>
+                                          <Label layoutX="81.0" layoutY="107.0" text="Event's Status" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView layoutX="11.0" layoutY="17.0">
+                                             <image>
+                                                <Image url="@../Pics/statut.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label fx:id="status" alignment="CENTER_RIGHT" layoutX="105.0" layoutY="17.0" prefHeight="27.0" prefWidth="137.0" textFill="WHITE">
+                                             <font>
+                                                <Font size="25.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="add_inc_exp_form" layoutX="6.0" layoutY="7.0" prefHeight="525.0" prefWidth="852.0" stylesheets="@..\CSS_files\intrfaceJAVA.css" visible="false">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="313.0" prefWidth="822.0" style="-fx-background-color: #ffff;" stylesheets="@..\CSS_files\intrfaceJAVA.css">
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="white-bg" />
+                                 </styleClass>
+                                 <children>
+                                    <TableView fx:id="table_inc" layoutX="14.0" layoutY="52.0" prefHeight="238.0" prefWidth="347.0">
+                                      <columns>
+                                        <TableColumn fx:id="colonne_num_inc" prefWidth="75.0" text="Id" />
+                                        <TableColumn fx:id="colonne_desc_inc" prefWidth="146.4000244140625" text="Description" />
+                                          <TableColumn fx:id="colonne_montant_inc" prefWidth="124.0" text="Amount" />
+                                      </columns>
+                                    </TableView>
+                                    <TableView fx:id="table_exp" layoutX="442.0" layoutY="52.0" prefHeight="238.0" prefWidth="347.0">
+                                       <columns>
+                                          <TableColumn fx:id="colonne_num_exp" prefWidth="75.0" text="Id" />
+                                          <TableColumn fx:id="colonne_desc_exp" prefWidth="146.4000244140625" text="Description" />
+                                          <TableColumn fx:id="colonne_montant_exp" prefWidth="124.0" text="Amount" />
+                                          <TableColumn fx:id="colonne_tva_exp" prefWidth="124.0" text="taux TVA" />
+                                       </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="49.0" layoutY="6.0" prefHeight="46.0" prefWidth="253.0" stylesheets="@Finance.css" text="Incomes" textFill="#121c76">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                       <effect>
+                                          <Bloom />
+                                       </effect>
+                                    </Label>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="476.0" layoutY="10.0" prefHeight="46.0" prefWidth="253.0" stylesheets="@Finance.css" text="Expenses" textFill="#121c76">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                       <effect>
+                                          <Bloom />
+                                       </effect>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <Label layoutX="498.0" layoutY="371.0" text="Description :" textFill="#121c76">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="add_desc_exp" layoutX="610.0" layoutY="369.0" prefHeight="26.0" prefWidth="166.0" styleClass="textfield" stylesheets="@Finance.css" />
+                              <Label layoutX="498.0" layoutY="403.0" text="Amount :" textFill="#121c76">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="add_amount_exp" layoutX="610.0" layoutY="401.0" prefHeight="26.0" prefWidth="165.0" styleClass="textfield" stylesheets="@Finance.css" />
+                              <Button fx:id="add_add_btn" layoutX="104.0" layoutY="478.0" mnemonicParsing="false" onAction="#handleAddIN" prefHeight="30.0" prefWidth="74.0" style="-fx-background-color: #121c76;" styleClass="add-btn" stylesheets="@Finance.css" text="    Add" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="112.0" layoutY="486.0">
+                                 <image>
+                                    <Image url="@../Guests_interface/ajouter-un-bouton-avec-le-symbole-plus-dans-un-cercle-noir.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="add_clear_btn" layoutX="196.0" layoutY="478.0" mnemonicParsing="false" onAction="#handleClearIn" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #121c76;" styleClass="clear-btn" stylesheets="@Finance.css" text="       Clear" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <ImageView fitHeight="19.0" fitWidth="19.0" layoutX="201.0" layoutY="483.0">
+                                 <image>
+                                    <Image url="@../Guests_interface/la-gomme.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="add_delete_btn" layoutX="291.0" layoutY="478.0" mnemonicParsing="false" onAction="#handleDeleteIn" prefHeight="30.0" prefWidth="86.0" styleClass="delete-btn" stylesheets="@Finance.css" text="    Delete" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <ImageView fitHeight="19.0" fitWidth="19.0" layoutX="300.0" layoutY="483.0">
+                                 <image>
+                                    <Image url="@../Guests_interface/supprimer.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="add_add_btn1" layoutX="511.0" layoutY="477.0" mnemonicParsing="false" onAction="#handleAddEx" prefHeight="30.0" prefWidth="74.0" style="-fx-background-color: #121c76;" styleClass="add-btn" stylesheets="@Finance.css" text="    Add" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="476.0" layoutY="485.0">
+                                 <image>
+                                    <Image url="@../../../../../Downloads/ajouter-un-bouton-avec-le-symbole-plus-dans-un-cercle-noir.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="521.0" layoutY="484.0">
+                                 <image>
+                                    <Image url="@../Guests_interface/ajouter-un-bouton-avec-le-symbole-plus-dans-un-cercle-noir.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="add_clear_btn1" layoutX="600.0" layoutY="477.0" mnemonicParsing="false" onAction="#HandleClearEx" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #121c76;" styleClass="clear-btn" stylesheets="@Finance.css" text="       Clear" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <ImageView fitHeight="19.0" fitWidth="19.0" layoutX="611.0" layoutY="482.0">
+                                 <image>
+                                    <Image url="@../Guests_interface/la-gomme.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="add_delete_btn1" layoutX="689.0" layoutY="477.0" mnemonicParsing="false" onAction="#HandleDeleteEx" prefHeight="30.0" prefWidth="86.0" styleClass="delete-btn" stylesheets="@Finance.css" text="    Delete" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <ImageView fitHeight="19.0" fitWidth="19.0" layoutX="697.0" layoutY="482.0">
+                                 <image>
+                                    <Image url="@../Guests_interface/supprimer.png" />
+                                 </image>
+                              </ImageView>
+                              <Line endX="61.0" endY="138.0" layoutX="353.0" layoutY="367.0" rotate="180.0" startX="61.0" startY="-30.0" stroke="#121c76" />
+                              <Label layoutX="34.0" layoutY="379.0" text="Descritption :" textFill="#121c76">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="add_desc_inc" layoutX="142.0" layoutY="376.0" prefHeight="26.0" prefWidth="166.0" styleClass="textfield" stylesheets="@Finance.css" />
+                              <Label layoutX="34.0" layoutY="417.0" text="Amount :" textFill="#121c76">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="add_amount_inc" layoutX="142.0" layoutY="414.0" prefHeight="26.0" prefWidth="165.0" styleClass="textfield" stylesheets="@Finance.css" />
+                              <Label layoutX="34.0" layoutY="340.0" text="Id :" textFill="#121c76">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="add_num_inc" layoutX="142.0" layoutY="337.0" prefHeight="26.0" prefWidth="166.0" styleClass="textfield" stylesheets="@Finance.css" />
+                              <Label layoutX="498.0" layoutY="340.0" text="Id :" textFill="#121c76">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="add_num_exp" layoutX="611.0" layoutY="337.0" prefHeight="26.0" prefWidth="166.0" styleClass="textfield" stylesheets="@Finance.css" />
+                              <Label layoutX="498.0" layoutY="435.0" text="TVA :" textFill="#121c76">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="add_tva_exp" layoutX="610.0" layoutY="433.0" prefHeight="26.0" prefWidth="165.0" styleClass="textfield" stylesheets="@Finance.css" />
+                           </children>
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="white-bg" />
+                           </styleClass>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

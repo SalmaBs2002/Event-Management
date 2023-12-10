@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="521.0" prefWidth="602.0" style="-fx-background-color: #121c76;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Signup_interface.Event_dataController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fffef8" height="430.0" layoutX="48.0" layoutY="41.0" stroke="BLACK" strokeType="INSIDE" width="511.0">
+         <effect>
+            <DropShadow height="30.36" radius="41.582499999999996" width="137.97" />
+         </effect>
+      </Rectangle>
+      <Label layoutX="93.0" layoutY="129.0" text="Event ID :" textFill="#121c76">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelId" layoutX="90.0" layoutY="45.0" />
+
+      <Label layoutX="92.0" layoutY="176.0" text="Event Name : " textFill="#121c76">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelNom" layoutX="90.0" layoutY="84.0" />
+
+      <Label layoutX="93.0" layoutY="218.0" prefHeight="30.0" prefWidth="110.0" text="Start Date:" textFill="#121c76">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelDate" layoutX="90.0" layoutY="123.0" />
+
+      <Label layoutX="93.0" layoutY="261.0" text="Location : " textFill="#121c76">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelLieu" layoutX="90.0" layoutY="162.0" />
+      <Label fx:id="labelCotisation" layoutX="90.0" layoutY="201.0" />
+      <Label fx:id="labelCapaciteMaximale" layoutX="160.0" layoutY="240.0" />
+      <Label fx:id="labelPassword" layoutX="160.0" layoutY="279.0" />
+      <Label layoutX="160.0" layoutY="49.0" prefHeight="70.0" prefWidth="367.0" text="Your Event Data" textFill="#121c76">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="2.0" specularConstant="1.24" specularExponent="25.87" surfaceScale="1.78">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+
+               </light>
+            </Lighting>
+         </effect>
+      </Label>
+
+      <Label layoutX="94.0" layoutY="352.0" text="Maximum Capacity : " textFill="#121c76">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+
+      <Label layoutX="92.0" layoutY="309.0" text="Fees Per Participant : " textFill="#121c76">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelId" layoutX="186.0" layoutY="129.0" prefHeight="30.0" prefWidth="180.0" textFill="#5f67a9">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelNom" layoutX="222.0" layoutY="176.0" prefHeight="30.0" prefWidth="180.0" textFill="#5f67a9">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelDate" layoutX="204.0" layoutY="218.0" prefHeight="30.0" prefWidth="180.0" textFill="#5f67a9">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelLieu" layoutX="194.0" layoutY="263.0" prefHeight="30.0" prefWidth="180.0" textFill="#5f67a9">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelCotisation" layoutX="294.0" layoutY="309.0" prefHeight="30.0" prefWidth="78.0" textFill="#5f67a9">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelCapaciteMaximale" layoutX="292.0" layoutY="352.0" prefHeight="30.0" prefWidth="44.0" textFill="#5f67a9">
+    <font>
+        <Font size="15.0" />
+    </font>
+</Label>
+
+   </children>
+</AnchorPane>
