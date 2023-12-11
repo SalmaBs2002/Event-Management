@@ -9,6 +9,7 @@ import classes.MyException;
 import pers.Sponsors;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  *
@@ -98,15 +99,13 @@ public final class Sponsoring extends EquipeOrg implements GestionListe {
     }
     
     @Override
-    public String toString(){
-        StringBuffer sb = new StringBuffer ("\n -----equipe de Sponsoring de Type : " + typeSponsoring 
-                + "\n -----son Budget : " + Budget + "\n *****liste des sponsors : " );
-        int i=1;
-        for (Sponsors sponsor : listeSponsors) {
-            sb.append("\n " + "i)" + "       " + sponsor.toString() + "    ");
-            i++;
-        }
-        return (sb.toString());
+    public String toString() {
+        String sponsorsList = listeSponsors.stream()
+                .map(sponsor -> "       " + sponsor.toString())
+                .collect(Collectors.joining("\n "));
+
+        return "\n -----equipe de Sponsoring de Type : " + typeSponsoring + "\n -----son Budget : " + Budget
+                + "\n *****liste des sponsors : " + sponsorsList;
     }
 
     @Override

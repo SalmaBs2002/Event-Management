@@ -330,6 +330,24 @@ public class GuestsController implements Initializable {
 
     @FXML
     private void Participants(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Participant_interface/InterfaceJAVA.fxml"));
+            Parent root = loader.load();
+
+            // Create a new stage
+            Stage stage = new Stage();
+            stage.setTitle("New Interface");
+            stage.setScene(new Scene(root));
+
+            // Close the current stage
+            ((Stage) ((Node) event.getSource()).getScene().getWindow()).close();
+
+            // Show the new stage
+            stage.show();
+        
+        } catch (IOException e) {
+            e.printStackTrace(); // Handle exception appropriately
+        }
     }
 
     @FXML

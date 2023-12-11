@@ -2,6 +2,6 @@
  * Empty Stylesheet file.
  */
 
-.mainFxmlClass {
-
+.start:hover{
+    -fx-cursor: hand;
 }
